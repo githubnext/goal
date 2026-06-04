@@ -2,6 +2,9 @@
 
 Goal is an Agentic Workflow for GitHub issues.
 
+It does something similar to `/goal` in Codex and Claude Code, packaged as a
+variant of the Autoloop agentic workflow pattern.
+
 Open an issue with the `goal` label and describe the outcome, completion
 criteria, verification evidence, and constraints. Goal works on the issue across
 runs using one long-running branch and PR. Each run comments on the issue. When
