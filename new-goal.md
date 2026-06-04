@@ -54,8 +54,11 @@ better" unless you turn them into a concrete contract.
 6. If not, propose the smallest setup PR that would make doneness checkable.
 7. Draft the goal issue.
 8. Ask the user to confirm any uncertain product, design, or policy detail.
-9. Create the issue only after the contract is strong.
-10. Add the `goal` label only when the workflow can safely start.
+9. Create the issue only after the contract is strong. If the Goal issue form is
+   installed, use its fields so the issue body follows the same contract.
+10. Add the `goal` label only when the workflow can safely start. If using the
+    installed issue form, submit it only when the label can be applied
+    immediately.
 
 ## Doneness Checks
 

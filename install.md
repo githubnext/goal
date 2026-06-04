@@ -10,7 +10,7 @@ Set up Goal in this repository by:
 
 1. Installing the `gh-aw` CLI extension.
 2. Initializing the repository for GitHub Agentic Workflows.
-3. Copying Goal workflow files and the issue template.
+3. Copying Goal workflow files and the Goal issue form.
 4. Compiling the workflow.
 5. Creating the `goal` and `goal-completed` labels.
 6. Adding agent instructions so generated workflow files stay fresh.
@@ -48,8 +48,8 @@ This configures the repository for Agentic Workflows.
 
 ## Step 3: Download Goal And Copy Files
 
-Download the Goal source as a zip and copy the workflow files into this
-repository.
+Download the Goal source as a zip and copy the workflow files and issue form
+into this repository.
 
 ### Linux And macOS
 
@@ -87,6 +87,11 @@ Remove-Item -Path "$env:TEMP\goal.zip", "$env:TEMP\goal_extract" -Recurse -Force
 
 To pin a version, replace `refs/heads/main` with `refs/tags/<tag>` and replace
 `goal-main` with `goal-<tag>`.
+
+This installs the guided Goal issue form at `.github/ISSUE_TEMPLATE/goal.yml`.
+Use it when a goal is ready for the workflow to start. If the goal needs a
+helper script, fixture, package script, CI target, or other setup before
+doneness can be judged, create that setup PR first.
 
 ## Step 4: Compile The Workflow
 
@@ -136,7 +141,7 @@ git checkout -b install-goal
 git add .
 git commit -m "Install Goal workflow"
 git push -u origin install-goal
-gh pr create --title "Install Goal workflow" --body "Set up the Goal agentic workflow and issue template."
+gh pr create --title "Install Goal workflow" --body "Set up the Goal agentic workflow and issue form."
 ```
 
 Report the pull request link to the user.
@@ -151,15 +156,21 @@ Use this shaping protocol:
 
 1. Restate the desired outcome in one sentence.
 2. Ask only for missing details that cannot be discovered from the repository.
-3. Turn the answer into a goal issue with these sections:
+3. Turn the answer into a goal issue using the installed Goal issue form, with
+   these sections:
    - `Goal`
    - `Completion Contract`
    - `Evidence / Verification`
    - `Scope and Constraints`
+   - `Context To Read First`
    - `Iteration Policy`
    - `Blocked Stop Condition`
-4. Review the draft with the user before adding the `goal` label.
-5. Once the user agrees, create the issue and apply the `goal` label.
+4. Decide whether an inline doneness script in the issue is enough, or whether a
+   small setup PR is needed first.
+5. Review the draft with the user before adding the `goal` label.
+6. Once the user agrees and the goal is ready to run, create the issue and apply
+   the `goal` label. If using the installed issue form, submit it only when the
+   `goal` label can be applied immediately.
 
 The distilled pattern is:
 
@@ -174,7 +185,7 @@ report <what failed, what is known, and what would unlock progress>.
 A strong issue tells the workflow what "done", "not done yet", and "blocked"
 mean. It should include at least one concrete verification surface: a test
 command, build command, benchmark, screenshot requirement, artifact review,
-log check, or source-of-truth document.
+log check, inline doneness script, or source-of-truth document.
 
 ### Example Strong Goal
 
