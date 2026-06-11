@@ -1,0 +1,136 @@
+name: Goal
+description: Create a verifiable Goal workflow issue
+title: "[Goal] "
+labels:
+  - goal
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this form for one coherent Goal workflow objective with a clear stopping condition.
+
+        A good goal is bigger than one prompt but smaller than an open-ended backlog. It should tell the workflow what to do, what not to change, how to prove progress, and when to stop as blocked instead of guessing.
+
+        If the goal needs a helper script, fixture, package script, CI target, or other setup before doneness can be judged, ask an agent to use `new-goal.md` first and create the setup PR before submitting this form.
+
+  - type: input
+    id: goal
+    attributes:
+      label: Goal
+      description: State the desired end state in one sentence.
+      placeholder: "Migrate tests/auth from legacyAuthHelper to createTestSession."
+    validations:
+      required: true
+
+  - type: textarea
+    id: completion-contract
+    attributes:
+      label: Completion Contract
+      description: Define exactly when Goal should add `goal-completed` and remove `goal`.
+      placeholder: |
+        Goal is complete only when:
+        - Every test in tests/auth uses createTestSession.
+        - legacyAuthHelper has no remaining call sites in tests/auth.
+        - The auth test suite and lint pass.
+    validations:
+      required: true
+
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence / Verification
+      description: List the commands, scripts, artifacts, screenshots, logs, or checks that prove the completion contract.
+      placeholder: |
+        Run from the repository root:
+
+        ```bash
+        set -euo pipefail
+        npm test -- tests/auth
+        npm run lint
+        ! rg "legacyAuthHelper" tests/auth
+        ```
+
+        Completion requires every command to exit 0.
+    validations:
+      required: true
+
+  - type: textarea
+    id: doneness-script
+    attributes:
+      label: Optional Inline Doneness Script
+      description: If a compact script can judge completion, put it here. Prefer an inline script over a setup PR when it only calls existing repo commands.
+      render: bash
+      placeholder: |
+        set -euo pipefail
+        npm test -- tests/auth
+        npm run lint
+        ! rg "legacyAuthHelper" tests/auth
+    validations:
+      required: false
+
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope and Constraints
+      description: Say what the workflow may change and what must not change or regress.
+      placeholder: |
+        The workflow may change:
+        - tests/auth/**
+        - test/helpers/auth.ts
+
+        The workflow must not change:
+        - production authentication behavior
+        - public API names
+        - payment provider configuration
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Context To Read First
+      description: Point the workflow at the files, docs, issues, PRs, logs, designs, references, or examples it should inspect before changing code.
+      placeholder: |
+        - tests/auth/session.test.ts
+        - test/helpers/auth.ts
+        - docs/testing/auth.md
+        - #123
+    validations:
+      required: true
+
+  - type: textarea
+    id: iteration-policy
+    attributes:
+      label: Iteration Policy
+      description: Explain how the workflow should choose each next checkpoint and report progress.
+      placeholder: |
+        Work in one coherent test group at a time. After each run, report what changed, what was verified, what remains, and whether anything is blocked. Prefer the smallest next checkpoint that can be validated with the evidence above.
+    validations:
+      required: true
+
+  - type: textarea
+    id: blocked-stop-condition
+    attributes:
+      label: Blocked Stop Condition
+      description: Define when the workflow should stop substantive work and comment instead of guessing.
+      placeholder: |
+        Stop and comment if tests require unavailable secrets, fixtures, product decisions, or external services. The blocked comment should include the exact command output, what is known, and the smallest user action that would unblock the workflow.
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: readiness
+    attributes:
+      label: Ready To Start
+      description: Submitting this form applies the `goal` label and may start the workflow.
+      options:
+        - label: This goal does not need a setup PR before the workflow starts.
+          required: true
+        - label: This is one coherent objective, not a loose backlog.
+          required: true
+        - label: The completion contract has observable evidence.
+          required: true
+        - label: The constraints are specific enough to prevent accidental broad rewrites.
+          required: true
+        - label: The workflow can tell the difference between done, not done yet, and blocked.
+          required: true
