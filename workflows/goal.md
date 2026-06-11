@@ -37,12 +37,19 @@ safe-outputs:
   create-pull-request:
     draft: true
     labels: [automation, goal]
-    protected-files: fallback-to-issue
+    protected-files:
+      policy: fallback-to-issue
+      exclude:
+        - README.md
     preserve-branch-name: true
     max: 1
   push-to-pull-request-branch:
     target: "*"
     title-prefix: "[Goal"
+    protected-files:
+      policy: fallback-to-issue
+      exclude:
+        - README.md
     max: 1
   update-issue:
     target: "*"
