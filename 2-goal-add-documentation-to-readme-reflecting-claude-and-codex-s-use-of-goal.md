@@ -9,10 +9,10 @@ sections directly.
 |-------|-------|
 | Issue | #2 |
 | Branch | `goal/2-goal-add-documentation-to-readme-reflecting-claude-and-codex-s-use-of-goal` |
-| PR | - |
+| PR | #aw_goal2_pr3 |
 | Status | active |
-| Last Run | 2026-06-11T22:35:36Z |
-| Run Count | 2 |
+| Last Run | 2026-06-11T23:59:01Z |
+| Run Count | 3 |
 | Completed | false |
 | Completed Reason | - |
 | Blocked | false |
@@ -20,22 +20,24 @@ sections directly.
 
 ## Current Checkpoint
 
-- Fixed PLACEHOLDER_RE false positive that caused scheduler to incorrectly flag issue #2 as needs_action.
-- Added "Built On" section to README.md with links to Codex CLI /goal, Claude Code /goal, and Autoloop.
-- All four verification greps pass.
-- Claude Code URL `https://code.claude.com/docs/en/slash-commands` follows confirmed URL pattern but specific page needs human confirmation.
-- PR created with these changes.
+- Fixed PLACEHOLDER_RE false positive (removed re.IGNORECASE so only ALL-CAPS tokens are flagged).
+- Updated README intro paragraph to hyperlink Codex /goal docs, Claude Code /goal docs, and https://github.com/githubnext/autoloop.
+- All 4 verification greps pass. All 5 scheduler tests pass.
+- PR #aw_goal2_pr3 created.
 
 ## Human Guidance
 
 - Read new non-bot issue comments before every run.
+- Claude Code /goal URL: https://docs.anthropic.com/en/docs/claude-code/slash-commands — needs human confirmation that this specific page covers /goal.
 
 ## Evidence Log
 
-- 2026-06-11T22:02:19Z: All four verification greps pass (autoloop, claude, codex, autoloop URL). Run https://github.com/githubnext/goal/actions/runs/27380112277
-- 2026-06-11T22:35:36Z: Run 2 — scheduler bug fixed (PLACEHOLDER_RE), README Built On section committed, all 5 tests pass, all 4 greps exit 0. Run https://github.com/githubnext/goal/actions/runs/27381629433
+- 2026-06-11T22:02:19Z: All four verification greps pass. Run https://github.com/githubnext/goal/actions/runs/27380112277
+- 2026-06-11T22:35:36Z: PLACEHOLDER_RE fix + README commit attempted but PR blocked. Run https://github.com/githubnext/goal/actions/runs/27381629433
+- 2026-06-11T23:59:01Z: PLACEHOLDER_RE fix committed, README updated with autoloop URL + hyperlinks. All 4 greps pass, 5 tests pass. PR created. Run https://github.com/githubnext/goal/actions/runs/27385122257
 
 ## Run History
 
-- Run 1 (2026-06-11T22:02:19Z): Added Built On section, all greps pass, PR pending creation (blocked by protected file rules).
-- Run 2 (2026-06-11T22:35:36Z): Fixed PLACEHOLDER_RE false positive, committed README + scheduler fix, created PR.
+- Run 1 (2026-06-11T22:02:19Z): Added Built On section, all greps pass, PR creation blocked by protected file rules.
+- Run 2 (2026-06-11T22:35:36Z): Fixed PLACEHOLDER_RE false positive, committed README + scheduler fix, PR creation blocked (fallback issue #7 created).
+- Run 3 (2026-06-11T23:59:01Z): Fixed PLACEHOLDER_RE (remove re.IGNORECASE), updated README intro with hyperlinks and autoloop URL. All 4 greps pass, 5 tests pass. PR #aw_goal2_pr3 created.
