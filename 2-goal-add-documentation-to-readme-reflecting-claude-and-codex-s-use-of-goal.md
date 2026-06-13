@@ -9,10 +9,10 @@ sections directly.
 |-------|-------|
 | Issue | #2 |
 | Branch | `goal/2-goal-add-documentation-to-readme-reflecting-claude-and-codex-s-use-of-goal` |
-| PR | #aw_goal2_pr5 |
+| PR | #aw_goal2_pr6 |
 | Status | active |
-| Last Run | 2026-06-12T19:08:58Z |
-| Run Count | 5 |
+| Last Run | 2026-06-13T00:01:39Z |
+| Run Count | 6 |
 | Completed | false |
 | Completed Reason | - |
 | Blocked | false |
@@ -24,13 +24,14 @@ sections directly.
 - Fixed PLACEHOLDER_RE: removed re.IGNORECASE so only ALL-CAPS tokens are flagged.
 - Added ## Built On section to README.md with Autoloop, Codex /goal, and Claude Code /goal links.
 - All 4 verification greps pass. All 5 unit tests pass.
-- PR #aw_goal2_pr5 created.
-- Claude Code URL https://code.claude.com/docs/en/slash-commands needs human confirmation.
+- PR #aw_goal2_pr6 created.
+- Claude Code URL https://docs.anthropic.com/en/docs/claude-code/slash-commands and Codex URL https://github.com/openai/codex/blob/main/docs/goal.md need human confirmation.
 
 ## Human Guidance
 
 - Read new non-bot issue comments before every run.
-- Claude Code /goal URL: https://code.claude.com/docs/en/slash-commands — needs human confirmation that this specific page covers /goal.
+- Claude Code /goal URL: https://docs.anthropic.com/en/docs/claude-code/slash-commands — needs human confirmation that this specific page covers /goal.
+- Codex /goal URL: https://github.com/openai/codex/blob/main/docs/goal.md — needs human confirmation.
 
 ## Evidence Log
 
@@ -39,6 +40,7 @@ sections directly.
 - 2026-06-11T23:59:01Z: PLACEHOLDER_RE fix committed, README updated with autoloop URL + hyperlinks. All 4 greps pass, 5 tests pass. PR blocked by protected-file policy. Run https://github.com/githubnext/goal/actions/runs/27385122257
 - 2026-06-12T06:03:49Z: Branch reset to main (PR #6 fixed protected-file policy). PLACEHOLDER_RE fixed, README updated. All 4 greps pass, 5 tests pass. PR creation blocked (fallback issue #10). Run https://github.com/githubnext/goal/actions/runs/27397746605
 - 2026-06-12T19:08:58Z: Branch reset to main. PLACEHOLDER_RE fixed, README ## Built On section added. All 4 greps pass, 5 tests pass. PR #aw_goal2_pr5 created. Claude Code URL needs confirmation. Run https://github.com/githubnext/goal/actions/runs/27437022908
+- 2026-06-13T00:01:39Z: Branch reset to main (0 ahead, 4 behind). PLACEHOLDER_RE fixed (re.IGNORECASE removed). README ## Built On section added with Autoloop, Codex /goal, Claude Code /goal links. All 4 greps pass, 5 tests pass. PR #aw_goal2_pr6 created. URLs need human confirmation. Run https://github.com/githubnext/goal/actions/runs/27449878559
 
 ## Run History
 
@@ -47,4 +49,5 @@ sections directly.
 - Run 3 (2026-06-11T23:59:01Z): Fixed PLACEHOLDER_RE (remove re.IGNORECASE), updated README intro with hyperlinks and autoloop URL. All 4 greps pass, 5 tests pass. PR push blocked by protected-file policy on README.md.
 - Run 4 (2026-06-12T06:03:49Z): Branch reset to main (protected-file policy fixed via PR #6). PLACEHOLDER_RE fixed. README updated. All 4 greps pass, 5 tests pass. PR creation blocked (fallback issue #10 created).
 - Run 5 (2026-06-12T19:08:58Z): Branch reset to main. Fixed PLACEHOLDER_RE. Added ## Built On section to README. All 4 greps pass, 5 tests pass. PR #aw_goal2_pr5 created. Claude Code URL needs confirmation.
+- Run 6 (2026-06-13T00:01:39Z): Branch reset to main. PLACEHOLDER_RE fixed. README Built On section added. All 4 greps pass, 5 tests pass. PR #aw_goal2_pr6 created. Claude Code and Codex URLs need human confirmation.
 
