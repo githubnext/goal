@@ -1,7 +1,6 @@
 # Goal #15: [Goal #2] Goal: add documentation to readme reflecting Claude and Codex's use of /goal
 
-This file is maintained by the Goal workflow. Maintainers may edit guidance
-sections directly.
+This file is maintained by the Goal workflow.
 
 ## Machine State
 
@@ -14,28 +13,12 @@ sections directly.
 | Last Run | 2026-06-14T03:40:16Z |
 | Run Count | 4 |
 | Completed | false |
-| Completed Reason | - |
 | Blocked | false |
-| Blocked Reason | - |
 
 ## Current Checkpoint
 
-- Waiting for issue definition to be completed (missing: scope, iteration_policy, blocked_stop_condition).
-
-## Human Guidance
-
-- Read new non-bot issue comments before every run.
+Waiting for missing sections: scope, iteration_policy, blocked_stop_condition.
 
 ## Evidence Log
 
-- Run 1 (2026-06-13T01:30:46Z): needs_action — missing sections: scope, iteration_policy, blocked_stop_condition. Posted comment proposing draft contract.
-- Run 2 (2026-06-13T13:02:45Z): needs_action — sections still missing after run 1. No human update to issue body detected.
-- Run 3 (2026-06-13T19:59:16Z): needs_action — sections still missing after runs 1 and 2. No human update to issue body detected.
-- Run 4 (2026-06-14T03:40:16Z): needs_action — sections still missing after runs 1–3. No human update to issue body detected.
-
-## Run History
-
-- Run 1 (2026-06-13T01:30:46Z): needs_action — proposed draft contract sections.
-- Run 2 (2026-06-13T13:02:45Z): needs_action — issue definition still incomplete, no changes made.
-- Run 3 (2026-06-13T19:59:16Z): needs_action — issue definition still incomplete, no changes made.
-- Run 4 (2026-06-14T03:40:16Z): needs_action — issue definition still incomplete, no changes made.
+- Runs 1–4: needs_action; missing 3 of 6 required sections. No human response.
