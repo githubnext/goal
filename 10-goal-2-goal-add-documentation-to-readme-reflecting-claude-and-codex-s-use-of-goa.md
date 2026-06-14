@@ -10,8 +10,8 @@ This file is maintained by the Goal workflow.
 | Branch | `goal/10-goal-2-goal-add-documentation-to-readme-reflecting-claude-and-codex-s-use-of-goa` |
 | PR | - |
 | Status | needs_action |
-| Last Run | 2026-06-14T15:10:27Z |
-| Run Count | 7 |
+| Last Run | 2026-06-14T20:52:34Z |
+| Run Count | 8 |
 | Completed | false |
 | Blocked | false |
 
@@ -21,4 +21,8 @@ Waiting for missing sections: completion_contract, evidence, scope, iteration_po
 
 ## Evidence Log
 
-- Runs 1–7: needs_action; missing 5 of 6 required sections. No human response after 7 runs.
+- Runs 1–8: needs_action; missing 5 of 6 required sections. No human response after 8 runs.
+
+## Clarifications Requested
+
+- Run 1 (2026-06-12T08:05:59Z): Proposed draft contract posted. Awaiting human to add missing sections to issue body and confirm the Anthropic docs URL for `/goal` in Claude Code.
