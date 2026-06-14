@@ -10,8 +10,8 @@ This file is maintained by the Goal workflow.
 | Branch | `goal/15-goal-2-goal-add-documentation-to-readme-reflecting-claude-and-codex-s-use-of-goa` |
 | PR | - |
 | Status | needs_action |
-| Last Run | 2026-06-14T13:05:18Z |
-| Run Count | 5 |
+| Last Run | 2026-06-14T18:54:34Z |
+| Run Count | 6 |
 | Completed | false |
 | Blocked | false |
 
@@ -21,4 +21,9 @@ Waiting for missing sections: scope, iteration_policy, blocked_stop_condition.
 
 ## Evidence Log
 
-- Runs 1–5: needs_action; missing 3 of 6 required sections. No human response after 5 runs.
+- Runs 1–6: needs_action; missing 3 of 6 required sections (scope, iteration_policy, blocked_stop_condition). No human response after 6 runs.
+
+## Run History
+
+- Run 6 (2026-06-14T18:54:34Z): needs_action — still missing scope, iteration_policy, blocked_stop_condition.
+- Runs 1–5: needs_action — same 3 missing sections, draft text proposed in run 1.
