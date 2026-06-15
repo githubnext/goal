@@ -10,8 +10,8 @@ This file is maintained by the Goal workflow.
 | Branch | `goal/7-goal-2-goal-add-documentation-to-readme-reflecting-claude-and-codex-s-use-of-goa` |
 | PR | - |
 | Status | needs_action |
-| Last Run | 2026-06-15T11:28:20Z |
-| Run Count | 11 |
+| Last Run | 2026-06-15T23:08:49Z |
+| Run Count | 12 |
 | Completed | false |
 | Blocked | false |
 
@@ -21,4 +21,10 @@ Waiting for missing sections: completion_contract, evidence, scope, iteration_po
 
 ## Evidence Log
 
-- Runs 1–11: needs_action; missing 5 of 6 required sections. No human response after 11 runs. Draft contract proposed multiple times.
+- Runs 1–12: needs_action; missing 5 of 6 required sections. No human response after 12 runs. Draft contract proposed in run 1.
+
+## Run History
+
+- Run 1 (2026-06-11): needs_action, proposed full draft contract
+- Runs 2–11: needs_action, no human response
+- Run 12 (2026-06-15T23:08Z): needs_action, no human response
