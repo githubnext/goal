@@ -98,13 +98,13 @@ TODO
                 self.assertIn("comment on\n  the goal issue instead.", workflow)
 
         lock = (ROOT / ".github" / "workflows" / "goal.lock.yml").read_text(encoding="utf-8")
-        config_match = re.search(r"^\s+(\{\"add_comment\".+})$", lock, flags=re.MULTILINE)
         handler_match = re.search(r'GH_AW_SAFE_OUTPUTS_HANDLER_CONFIG: "(.+)"', lock)
-        self.assertIsNotNone(config_match)
+        config_line = next((line.strip() for line in lock.splitlines() if line.strip().startswith('{"add_comment"')), None)
+        self.assertIsNotNone(config_line)
         self.assertIsNotNone(handler_match)
 
         configs = [
-            json.loads(config_match.group(1)),
+            json.loads(config_line),
             json.loads(json.loads(f'"{handler_match.group(1)}"')),
         ]
         for config in configs:
@@ -112,7 +112,7 @@ TODO
                 self.assertIs(config["missing_tool"]["create_issue"], False)
                 self.assertIs(config["missing_data"]["create_issue"], False)
                 self.assertIs(config["report_incomplete"]["create_issue"], False)
-                self.assertIn(config["noop"]["report-as-issue"], (False, "false"))
+                self.assertEqual(str(config["noop"]["report-as-issue"]).lower(), "false")
 
         expected_false_flags = {
             "GH_AW_NOOP_REPORT_AS_ISSUE",
