@@ -1,4 +1,6 @@
 import importlib.util
+import json
+import re
 import unittest
 from pathlib import Path
 
@@ -96,18 +98,33 @@ TODO
                 self.assertIn("comment on\n  the goal issue instead.", workflow)
 
         lock = (ROOT / ".github" / "workflows" / "goal.lock.yml").read_text(encoding="utf-8")
+        config_match = re.search(r"^\s+(\{\"add_comment\".+})$", lock, flags=re.MULTILINE)
+        handler_match = re.search(r'GH_AW_SAFE_OUTPUTS_HANDLER_CONFIG: "(.+)"', lock)
+        self.assertIsNotNone(config_match)
+        self.assertIsNotNone(handler_match)
 
-        self.assertIn('"missing_tool":{"create_issue":false}', lock)
-        self.assertIn('"missing_data":{"create_issue":false}', lock)
-        self.assertIn('"report_incomplete":{"create_issue":false}', lock)
-        self.assertIn('"noop":{"max":1,"report-as-issue":"false"}', lock)
-        self.assertIn('GH_AW_NOOP_REPORT_AS_ISSUE: "false"', lock)
-        self.assertIn('GH_AW_MISSING_TOOL_CREATE_ISSUE: "false"', lock)
-        self.assertIn('GH_AW_REPORT_INCOMPLETE_CREATE_ISSUE: "false"', lock)
-        self.assertIn('GH_AW_FAILURE_REPORT_AS_ISSUE: "false"', lock)
-        self.assertNotIn('GH_AW_MISSING_DATA_CREATE_ISSUE: "true"', lock)
-        self.assertNotIn('REPORT_AS_ISSUE: "true"', lock)
-        self.assertNotIn('CREATE_ISSUE: "true"', lock)
+        configs = [
+            json.loads(config_match.group(1)),
+            json.loads(json.loads(f'"{handler_match.group(1)}"')),
+        ]
+        for config in configs:
+            with self.subTest(config=config):
+                self.assertIs(config["missing_tool"]["create_issue"], False)
+                self.assertIs(config["missing_data"]["create_issue"], False)
+                self.assertIs(config["report_incomplete"]["create_issue"], False)
+                self.assertIn(config["noop"]["report-as-issue"], (False, "false"))
+
+        expected_false_flags = {
+            "GH_AW_NOOP_REPORT_AS_ISSUE",
+            "GH_AW_MISSING_TOOL_CREATE_ISSUE",
+            "GH_AW_REPORT_INCOMPLETE_CREATE_ISSUE",
+            "GH_AW_FAILURE_REPORT_AS_ISSUE",
+        }
+        present_flags = set()
+        for match in re.finditer(r"(GH_AW_[A-Z_]*(?:REPORT_AS_ISSUE|CREATE_ISSUE)): \"([^\"]+)\"", lock):
+            present_flags.add(match.group(1))
+            self.assertEqual(match.group(2), "false")
+        self.assertTrue(expected_false_flags.issubset(present_flags))
 
 
 if __name__ == "__main__":
