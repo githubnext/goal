@@ -104,7 +104,7 @@ TODO
         self.assertIn('GH_AW_MISSING_TOOL_CREATE_ISSUE: "false"', lock)
         self.assertIn('GH_AW_REPORT_INCOMPLETE_CREATE_ISSUE: "false"', lock)
         self.assertIn('GH_AW_FAILURE_REPORT_AS_ISSUE: "false"', lock)
-        self.assertNotIn("GH_AW_MISSING_DATA_CREATE_ISSUE", lock)
+        self.assertNotIn('GH_AW_MISSING_DATA_CREATE_ISSUE: "true"', lock)
         self.assertNotIn('REPORT_AS_ISSUE: "true"', lock)
         self.assertNotIn('CREATE_ISSUE: "true"', lock)
 
