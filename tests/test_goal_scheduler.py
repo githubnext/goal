@@ -82,6 +82,31 @@ TODO
         self.assertEqual(selected["number"], 2)
         self.assertEqual([goal["number"] for goal in deferred], [1])
 
+    def test_workflow_problem_reports_stay_on_goal_issue(self):
+        for workflow_path in (ROOT / "workflows" / "goal.md", ROOT / ".github" / "workflows" / "goal.md"):
+            workflow = workflow_path.read_text(encoding="utf-8")
+
+            self.assertIn("report-failure-as-issue: false", workflow)
+            self.assertIn("missing-tool:\n    create-issue: false", workflow)
+            self.assertIn("missing-data:\n    create-issue: false", workflow)
+            self.assertIn("report-incomplete:\n    create-issue: false", workflow)
+            self.assertIn("noop:\n    report-as-issue: false", workflow)
+            self.assertIn("use `add_comment` on\n`selected.number`. Do not open a new issue.", workflow)
+            self.assertIn("comment on\n  the goal issue instead.", workflow)
+
+        lock = (ROOT / ".github" / "workflows" / "goal.lock.yml").read_text(encoding="utf-8")
+
+        self.assertIn('"missing_tool":{"create_issue":false}', lock)
+        self.assertIn('"missing_data":{"create_issue":false}', lock)
+        self.assertIn('"report_incomplete":{"create_issue":false}', lock)
+        self.assertIn('"noop":{"max":1,"report-as-issue":"false"}', lock)
+        self.assertIn('GH_AW_NOOP_REPORT_AS_ISSUE: "false"', lock)
+        self.assertIn('GH_AW_MISSING_TOOL_CREATE_ISSUE: "false"', lock)
+        self.assertIn('GH_AW_REPORT_INCOMPLETE_CREATE_ISSUE: "false"', lock)
+        self.assertIn('GH_AW_FAILURE_REPORT_AS_ISSUE: "false"', lock)
+        self.assertNotIn('REPORT_AS_ISSUE: "true"', lock)
+        self.assertNotIn('CREATE_ISSUE: "true"', lock)
+
 
 if __name__ == "__main__":
     unittest.main()
