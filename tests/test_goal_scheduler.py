@@ -82,17 +82,18 @@ TODO
         self.assertEqual(selected["number"], 2)
         self.assertEqual([goal["number"] for goal in deferred], [1])
 
-    def test_workflow_problem_reports_stay_on_goal_issue(self):
+    def test_workflow_problem_reports_do_not_create_issues(self):
         for workflow_path in (ROOT / "workflows" / "goal.md", ROOT / ".github" / "workflows" / "goal.md"):
-            workflow = workflow_path.read_text(encoding="utf-8")
+            with self.subTest(workflow_path=workflow_path):
+                workflow = workflow_path.read_text(encoding="utf-8")
 
-            self.assertIn("report-failure-as-issue: false", workflow)
-            self.assertIn("missing-tool:\n    create-issue: false", workflow)
-            self.assertIn("missing-data:\n    create-issue: false", workflow)
-            self.assertIn("report-incomplete:\n    create-issue: false", workflow)
-            self.assertIn("noop:\n    report-as-issue: false", workflow)
-            self.assertIn("use `add_comment` on\n`selected.number`. Do not open a new issue.", workflow)
-            self.assertIn("comment on\n  the goal issue instead.", workflow)
+                self.assertIn("report-failure-as-issue: false", workflow)
+                self.assertIn("missing-tool:\n    create-issue: false", workflow)
+                self.assertIn("missing-data:\n    create-issue: false", workflow)
+                self.assertIn("report-incomplete:\n    create-issue: false", workflow)
+                self.assertIn("noop:\n    report-as-issue: false", workflow)
+                self.assertIn("use `add_comment` on\n`selected.number`. Do not open a new issue.", workflow)
+                self.assertIn("comment on\n  the goal issue instead.", workflow)
 
         lock = (ROOT / ".github" / "workflows" / "goal.lock.yml").read_text(encoding="utf-8")
 
