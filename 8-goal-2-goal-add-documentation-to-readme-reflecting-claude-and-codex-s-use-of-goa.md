@@ -11,8 +11,8 @@ sections directly.
 | Branch | `goal/8-goal-2-goal-add-documentation-to-readme-reflecting-claude-and-codex-s-use-of-goa` |
 | PR | - |
 | Status | needs_action |
-| Last Run | 2026-06-20T16:59:20Z |
-| Run Count | 72 |
+| Last Run | 2026-06-20T17:55:29Z |
+| Run Count | 73 |
 | Completed | false |
 | Blocked | false |
 
@@ -30,9 +30,8 @@ Waiting for missing sections: completion_contract, scope, iteration_policy, bloc
 - Draft contract proposed in every run comment.
 - README already mentions Claude Code, Codex, and Autoloop in prose but lacks hyperlinks (the actual change needed).
 - Issue #2 (parent) marked `goal-completed` but README changes were never merged.
-- Runs 53–70: Same status; still no human response after 69 runs.
-- Run 71 (2026-06-20T15:58Z): needs_action — same 4 sections still missing; no human response after 70 runs.
-- Run 72 (2026-06-20T16:59Z): needs_action — same 4 sections still missing; no human response after 71 runs.
+- Runs 53–72: Same status; still no human response after 71 runs.
+- Run 73 (2026-06-20T17:55Z): needs_action — same 4 sections still missing; no human response after 72 runs.
 
 ## Run History
 
@@ -52,5 +51,5 @@ Waiting for missing sections: completion_contract, scope, iteration_policy, bloc
 - Run 67 (2026-06-20T12:07Z): needs_action — same 4 sections still missing; no human response after 66 runs.
 - Run 68 (2026-06-20T13:01Z): needs_action — same 4 sections still missing; no human response after 67 runs.
 - Run 70 (2026-06-20T15:08Z): needs_action — same 4 sections still missing; no human response after 69 runs.
-- Run 71 (2026-06-20T15:58Z): needs_action — same 4 sections still missing; no human response after 70 runs.
-- Run 72 (2026-06-20T16:59Z): needs_action — same 4 sections still missing; no human response after 71 runs.
+- Runs 71–72 consolidated to evidence log above.
+- Run 73 (2026-06-20T17:55Z): needs_action — same 4 sections still missing; no human response after 72 runs.
