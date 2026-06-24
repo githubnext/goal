@@ -11,8 +11,8 @@ sections directly.
 | Branch | `goal/8-goal-2-goal-add-documentation-to-readme-reflecting-claude-and-codex-s-use-of-goa` |
 | PR | - |
 | Status | needs_action |
-| Last Run | 2026-06-23T23:44:46Z |
-| Run Count | 128 |
+| Last Run | 2026-06-24T01:20:13Z |
+| Run Count | 129 |
 | Completed | false |
 | Blocked | false |
 
@@ -31,39 +31,8 @@ Waiting for missing sections: completion_contract, scope, iteration_policy, bloc
 - README already mentions Claude Code, Codex, and Autoloop in prose but lacks hyperlinks (the actual change needed).
 - Issue #2 (parent) marked `goal-completed` but README changes were never merged.
 - Run 89 (2026-06-21T16:06Z): needs_action — same 4 sections still missing; no human response after 88 runs.
-- Run 90 (2026-06-21T16:58Z): needs_action — same 4 sections still missing; no human response after 89 runs.
-- Run 91 (2026-06-21T17:59Z): needs_action — same 4 sections still missing; no human response after 90 runs.
-- Run 92 (2026-06-21T18:58Z): needs_action — same 4 sections still missing; no human response after 91 runs.
-- Run 93 (2026-06-21T20:03Z): needs_action — same 4 sections still missing; no human response after 92 runs.
-- Run 94 (2026-06-21T21:54Z): needs_action — same 4 sections still missing; no human response after 93 runs.
-- Run 96 (2026-06-21T23:55Z): needs_action — same 4 sections still missing; no human response after 95 runs.
-- Run 97 (2026-06-22T01:36Z): needs_action — same 4 sections still missing; no human response after 96 runs.
-- Run 98 (2026-06-22T03:40Z): needs_action — same 4 sections still missing; no human response after 97 runs.
-- Run 99 (2026-06-22T06:16Z): needs_action — same 4 sections still missing; no human response after 98 runs.
-- Run 101 (2026-06-22T11:22Z): needs_action — same 4 sections still missing; no human response after 100 runs.
-- Run 102 (2026-06-22T13:19Z): needs_action — same 4 sections still missing; no human response after 101 runs.
-- Run 103 (2026-06-22T15:15Z): needs_action — same 4 sections still missing; no human response after 102 runs.
-- Run 104 (2026-06-22T17:08Z): needs_action — same 4 sections still missing; no human response after 103 runs.
-- Run 105 (2026-06-22T18:42Z): needs_action — same 4 sections still missing; no human response after 104 runs.
-- Run 106 (2026-06-22T20:24Z): needs_action — same 4 sections still missing; no human response after 105 runs.
-- Run 107 (2026-06-22T21:24Z): needs_action — same 4 sections still missing; no human response after 106 runs.
-- Run 108 (2026-06-22T22:11Z): needs_action — same 4 sections still missing; no human response after 107 runs.
-- Run 109 (2026-06-22T22:59Z): needs_action — same 4 sections still missing; no human response after 108 runs.
-- Run 110 (2026-06-22T23:53Z): needs_action — same 4 sections still missing; no human response after 109 runs.
-- Run 112 (2026-06-23T02:11Z): needs_action — same 4 sections still missing; no human response after 111 runs.
-- Run 114 (2026-06-23T05:52Z): needs_action — same 4 sections still missing; no human response after 113 runs.
-- Run 115 (2026-06-23T07:41Z): needs_action — same 4 sections still missing; no human response after 114 runs.
-- Run 116 (2026-06-23T09:39Z): needs_action — same 4 sections still missing; no human response after 115 runs.
-- Run 117 (2026-06-23T11:32Z): needs_action — same 4 sections still missing; no human response after 116 runs.
-- Run 118 (2026-06-23T13:24Z): needs_action — same 4 sections still missing; no human response after 117 runs.
-- Run 119 (2026-06-23T14:16Z): needs_action — same 4 sections still missing; no human response after 118 runs.
-- Run 121 (2026-06-23T17:12Z): needs_action — same 4 sections still missing; no human response after 120 runs.
-- Run 122 (2026-06-23T18:09Z): needs_action — same 4 sections still missing; no human response after 121 runs.
-- Run 123 (2026-06-23T19:14Z): needs_action — same 4 sections still missing; no human response after 122 runs.
-- Run 125 (2026-06-23T21:07Z): needs_action — same 4 sections still missing; no human response after 124 runs.
-- Run 126 (2026-06-23T21:57Z): needs_action — same 4 sections still missing; no human response after 125 runs.
-- Run 127 (2026-06-23T22:52Z): needs_action — same 4 sections still missing; no human response after 126 runs.
-- Run 128 (2026-06-23T23:44Z): needs_action — same 4 sections still missing; no human response after 127 runs.
+- Run 90–128: needs_action — same 4 sections still missing; no human response.
+- Run 129 (2026-06-24T01:20Z): needs_action — same 4 sections still missing; no human response after 128 runs.
 
 ## Run History
 
