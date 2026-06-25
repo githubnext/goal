@@ -11,8 +11,8 @@ sections directly.
 | Branch | `goal/8-goal-2-goal-add-documentation-to-readme-reflecting-claude-and-codex-s-use-of-goa` |
 | PR | - |
 | Status | needs_action |
-| Last Run | 2026-06-25T11:20:57Z |
-| Run Count | 155 |
+| Last Run | 2026-06-25T12:12:20Z |
+| Run Count | 156 |
 | Completed | false |
 | Blocked | false |
 
@@ -30,11 +30,9 @@ Waiting for missing sections: completion_contract, scope, iteration_policy, bloc
 - Draft contract proposed in every run comment.
 - README already mentions Claude Code, Codex, and Autoloop in prose but lacks hyperlinks (the actual change needed).
 - Issue #2 (parent) marked `goal-completed` but README changes were never merged.
-- Run 89 (2026-06-21T16:06Z): needs_action — same 4 sections still missing; no human response after 88 runs.
-- Runs 90–129: needs_action — same 4 sections still missing; no human response.
-- Run 130 (2026-06-24T02:11Z): needs_action — same 4 sections still missing; no human response after 129 runs.
-- Runs 134–154 (2026-06-24 to 2026-06-25): needs_action — same 4 sections still missing; no human response.
+- Runs 89–154: needs_action — same 4 sections still missing; no human response.
 - Run 155 (2026-06-25T11:20Z): needs_action — same 4 sections still missing; no human response after 154 runs.
+- Run 156 (2026-06-25T12:12Z): needs_action — same 4 sections still missing; no human response after 155 runs.
 
 ## Requested Clarifications
 
