@@ -23,7 +23,7 @@ Install the Goal Agentic Workflow using https://github.com/githubnext/goal/blob/
 Paste this into your favorite coding agent to create a good goal:
 
 ```text
-Install the Goal Agentic Workflow using https://github.com/githubnext/goal/blob/main/new-goal.md
+Create a new goal using https://github.com/githubnext/goal/blob/main/new-goal.md
 ```
 
 The agent should help turn the work into a concrete, verifiable issue before
