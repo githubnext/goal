@@ -11,8 +11,8 @@ sections directly.
 | Branch | `goal/8-goal-2-goal-add-documentation-to-readme-reflecting-claude-and-codex-s-use-of-goa` |
 | PR | - |
 | Status | needs_action |
-| Last Run | 2026-06-28T11:09:06Z |
-| Run Count | 214 |
+| Last Run | 2026-06-28T12:01:17Z |
+| Run Count | 215 |
 | Completed | false |
 | Blocked | false |
 
@@ -36,18 +36,8 @@ Waiting for missing sections: completion_contract, scope, iteration_policy, bloc
 - Run 172 (2026-06-26T07:42Z): needs_action — same 4 sections still missing; no human response after 171 runs.
 - Run 180 (2026-06-26T17:09Z): needs_action — same 4 sections still missing; no human response after 179 runs.
 - Runs 181–199: needs_action — same 4 sections still missing; no human response.
-- Run 200 (2026-06-27T15:52:22Z): needs_action — same 4 sections still missing; no human response after 199 runs.
-- Run 201 (2026-06-27T16:47:28Z): needs_action — same 4 sections still missing; no human response after 200 runs.
-- Run 202 (2026-06-27T17:47:10Z): needs_action — same 4 sections still missing; no human response after 201 runs.
-- Run 203 (2026-06-27T18:50:02Z): needs_action — same 4 sections still missing; no human response after 202 runs.
-- Run 204 (2026-06-27T19:54:19Z): needs_action — same 4 sections still missing; no human response after 203 runs.
-- Run 205 (2026-06-27T20:46:13Z): needs_action — same 4 sections still missing; no human response after 204 runs.
-- Run 206 (2026-06-27T21:46:45Z): needs_action — same 4 sections still missing; no human response after 205 runs.
-- Run 207 (2026-06-27T22:46:02Z): needs_action — same 4 sections still missing; no human response after 206 runs.
-- Run 209 (2026-06-28T01:29:43Z): needs_action — same 4 sections still missing; no human response after 208 runs.
-- Run 212 (2026-06-28T07:43:14Z): needs_action — same 4 sections still missing; no human response after 211 runs.
-- Run 213 (2026-06-28T09:33:16Z): needs_action — same 4 sections still missing; no human response after 212 runs.
-- Run 214 (2026-06-28T11:09:06Z): needs_action — same 4 sections still missing; no human response after 213 runs.
+- Runs 200–214: needs_action — same 4 sections still missing; no human response.
+- Run 215 (2026-06-28T12:01:17Z): needs_action — same 4 sections still missing; no human response after 214 runs.
 
 ## Requested Clarifications
 
@@ -60,11 +50,6 @@ The following sections must be added to issue #8 before Goal can proceed:
 
 ## Run History
 
-- Run 194: 2026-06-27T10:09:29Z — needs_action, no human response, no implementation attempted.
-- Run 195: 2026-06-27T11:06:08Z — needs_action, no human response, no implementation attempted.
-- Run 196: 2026-06-27T11:54:55Z — needs_action, no human response, no implementation attempted.
-- Run 197: 2026-06-27T12:57:37Z — needs_action, no human response, no implementation attempted.
-- Run 199: 2026-06-27T14:59:07Z — needs_action, no human response, no implementation attempted.
 - Run 200: 2026-06-27T15:52:22Z — needs_action, no human response, no implementation attempted.
 - Run 201: 2026-06-27T16:47:28Z — needs_action, no human response, no implementation attempted.
 - Run 202: 2026-06-27T17:47:10Z — needs_action, no human response, no implementation attempted.
@@ -79,3 +64,4 @@ The following sections must be added to issue #8 before Goal can proceed:
 - Run 212: 2026-06-28T07:43:14Z — needs_action, no human response, no implementation attempted.
 - Run 213: 2026-06-28T09:33:16Z — needs_action, no human response, no implementation attempted.
 - Run 214: 2026-06-28T11:09:06Z — needs_action, no human response, no implementation attempted.
+- Run 215: 2026-06-28T12:01:17Z — needs_action, no human response, no implementation attempted.
