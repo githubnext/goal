@@ -11,8 +11,8 @@ sections directly.
 | Branch | `goal/8-goal-2-goal-add-documentation-to-readme-reflecting-claude-and-codex-s-use-of-goa` |
 | PR | - |
 | Status | needs_action |
-| Last Run | 2026-06-29T13:57:06Z |
-| Run Count | 234 |
+| Last Run | 2026-06-29T15:40:53Z |
+| Run Count | 235 |
 | Completed | false |
 | Blocked | false |
 
@@ -30,21 +30,8 @@ Waiting for missing sections: completion_contract, scope, iteration_policy, bloc
 - Draft contract proposed in every run comment.
 - README already mentions Claude Code, Codex, and Autoloop in prose but lacks hyperlinks (the actual change needed).
 - Issue #2 (parent) marked `goal-completed` but README changes were never merged.
-- Runs 89–154: needs_action — same 4 sections still missing; no human response.
-- Run 155 (2026-06-25T11:20Z): needs_action — same 4 sections still missing; no human response after 154 runs.
-- Runs 156–222: needs_action — same 4 sections still missing; no human response.
-- Run 223 (2026-06-28T19:55:11Z): needs_action — same 4 sections still missing; no human response after 222 runs.
-- Run 224: 2026-06-28T20:47:35Z — needs_action, no human response, no implementation attempted.
-- Run 225: 2026-06-28T21:47:25Z — needs_action, no human response, no implementation attempted.
-- Run 226: 2026-06-28T22:46:21Z — needs_action, no human response, no implementation attempted.
-- Run 227: 2026-06-28T23:48:16Z — needs_action, no human response, no implementation attempted.
-- Run 228: 2026-06-29T01:29:39Z — needs_action, no human response, no implementation attempted.
-- Run 229: 2026-06-29T03:39:34Z — needs_action, no human response, no implementation attempted.
-- Run 230: 2026-06-29T06:05:51Z — needs_action, no human response, no implementation attempted.
-- Run 231: 2026-06-29T08:13:50Z — needs_action, no human response, no implementation attempted.
-- Run 232: 2026-06-29T10:03:32Z — needs_action, no human response, no implementation attempted.
-- Run 233: 2026-06-29T12:08:39Z — needs_action, no human response, no implementation attempted.
-- Run 234: 2026-06-29T13:57:06Z — needs_action, no human response, no implementation attempted.
+- Runs 89–234: needs_action — same 4 sections still missing; no human response.
+- Run 235: 2026-06-29T15:40:53Z — needs_action, no human response, no implementation attempted.
 
 ## Requested Clarifications
 
@@ -57,14 +44,5 @@ The following sections must be added to issue #8 before Goal can proceed:
 
 ## Run History
 
-- Run 224: 2026-06-28T20:47:35Z — needs_action, no human response, no implementation attempted.
-- Run 225: 2026-06-28T21:47:25Z — needs_action, no human response, no implementation attempted.
-- Run 226: 2026-06-28T22:46:21Z — needs_action, no human response, no implementation attempted.
-- Run 227: 2026-06-28T23:48:16Z — needs_action, no human response, no implementation attempted.
-- Run 228: 2026-06-29T01:29:39Z — needs_action, no human response, no implementation attempted.
-- Run 229: 2026-06-29T03:39:34Z — needs_action, no human response, no implementation attempted.
-- Run 230: 2026-06-29T06:05:51Z — needs_action, no human response, no implementation attempted.
-- Run 231: 2026-06-29T08:13:50Z — needs_action, no human response, no implementation attempted.
-- Run 232: 2026-06-29T10:03:32Z — needs_action, no human response, no implementation attempted.
-- Run 233: 2026-06-29T12:08:39Z — needs_action, no human response, no implementation attempted.
-- Run 234: 2026-06-29T13:57:06Z — needs_action, no human response, no implementation attempted.
+- Runs 224–234: needs_action, no human response, no implementation attempted.
+- Run 235: 2026-06-29T15:40:53Z — needs_action, no human response, no implementation attempted.
