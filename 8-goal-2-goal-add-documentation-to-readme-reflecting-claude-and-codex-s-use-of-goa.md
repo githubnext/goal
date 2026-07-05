@@ -11,8 +11,8 @@ sections directly.
 | Branch | `goal/8-goal-2-goal-add-documentation-to-readme-reflecting-claude-and-codex-s-use-of-goa` |
 | PR | - |
 | Status | needs_action |
-| Last Run | 2026-07-05T14:04:47Z |
-| Run Count | 353 |
+| Last Run | 2026-07-05T14:57:09Z |
+| Run Count | 354 |
 | Completed | false |
 | Blocked | false |
 
@@ -24,17 +24,6 @@ Waiting for missing sections: completion_contract, scope, iteration_policy, bloc
 
 - Read new non-bot issue comments before every run.
 
-## Evidence Log
-
-- Runs 1–88: needs_action; missing 4 of 6 required sections. No human response after 88 runs.
-- Draft contract proposed in every run comment.
-- README already mentions Claude Code, Codex, and Autoloop in prose but lacks hyperlinks (the actual change needed).
-- Issue #2 (parent) marked `goal-completed` but README changes were never merged.
-- Runs 89–345: needs_action — same 4 sections still missing; no human response.
-- Runs 346–351: needs_action — no human response.
-- Run 352: needs_action — no human response.
-- Run 353: needs_action — no human response.
-
 ## Requested Clarifications
 
 The following sections must be added to issue #8 before Goal can proceed:
@@ -44,6 +33,15 @@ The following sections must be added to issue #8 before Goal can proceed:
 3. **Iteration Policy** — single run vs. multi-run approach?
 4. **Blocked Stop Condition** — when should Goal stop and report?
 
+## Evidence Log
+
+- Runs 1–88: needs_action; missing 4 of 6 required sections. No human response after 88 runs.
+- Draft contract proposed in every run comment.
+- README already mentions Claude Code, Codex, and Autoloop in prose but lacks hyperlinks (the actual change needed).
+- Issue #2 (parent) marked `goal-completed` but README changes were never merged.
+- Runs 89–353: needs_action — same 4 sections still missing; no human response.
+- Run 354: needs_action — no human response.
+
 ## Run History
 
-- Runs 230–353: needs_action, no human response, no implementation attempted.
+- Runs 230–354: needs_action, no human response, no implementation attempted.
