@@ -11,8 +11,8 @@ sections directly.
 | Branch | `goal/8-goal-2-goal-add-documentation-to-readme-reflecting-claude-and-codex-s-use-of-goa` |
 | PR | - |
 | Status | needs_action |
-| Last Run | 2026-07-06T23:46:31Z |
-| Run Count | 379 |
+| Last Run | 2026-07-07T01:08:53Z |
+| Run Count | 380 |
 | Completed | false |
 | Blocked | false |
 
@@ -40,16 +40,8 @@ The following sections must be added to issue #8 before Goal can proceed:
 - README already mentions Claude Code, Codex, and Autoloop in prose but lacks hyperlinks (the actual change needed).
 - Issue #2 (parent) marked `goal-completed` but README changes were never merged.
 - Runs 89–370: needs_action — same 4 sections still missing; no human response.
-- Run 371: needs_action — no human response, no implementation attempted.
-- Run 372: needs_action — no human response after 371 runs; draft contract re-proposed.
-- Run 373: needs_action — no human response after 372 runs; draft contract re-proposed.
-- Run 374: needs_action — no human response after 373 runs; draft contract re-proposed.
-- Run 375: needs_action — no human response after 374 runs; draft contract re-proposed.
-- Run 376: needs_action — no human response after 375 runs; draft contract re-proposed.
-- Run 377: needs_action — no human response after 376 runs; draft contract re-proposed.
-- Run 378: needs_action — no human response after 377 runs; draft contract re-proposed.
-- Run 379: needs_action — no human response after 378 runs; draft contract re-proposed.
+- Run 371–380: needs_action — no human response; draft contract re-proposed each run.
 
 ## Run History
 
-- Runs 230–379: needs_action, no human response, no implementation attempted.
+- Runs 230–380: needs_action, no human response, no implementation attempted.
