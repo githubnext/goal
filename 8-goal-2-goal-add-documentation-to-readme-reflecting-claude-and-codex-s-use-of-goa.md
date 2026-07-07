@@ -11,8 +11,8 @@ sections directly.
 | Branch | `goal/8-goal-2-goal-add-documentation-to-readme-reflecting-claude-and-codex-s-use-of-goa` |
 | PR | - |
 | Status | needs_action |
-| Last Run | 2026-07-07T11:25:22Z |
-| Run Count | 386 |
+| Last Run | 2026-07-07T12:20:16Z |
+| Run Count | 387 |
 | Completed | false |
 | Blocked | false |
 
@@ -42,7 +42,8 @@ The following sections must be added to issue #8 before Goal can proceed:
 - Runs 89–370: needs_action — same 4 sections still missing; no human response.
 - Runs 371–385: needs_action — no human response; draft contract re-proposed each run.
 - Run 386: needs_action — no human response; draft contract re-proposed.
+- Run 387: needs_action — no human response; draft contract re-proposed.
 
 ## Run History
 
-- Runs 230–386: needs_action, no human response, no implementation attempted.
+- Runs 230–387: needs_action, no human response, no implementation attempted.
