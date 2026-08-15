@@ -30,11 +30,20 @@ network:
   - dotnet
 
 safe-outputs:
+  report-failure-as-issue: false
   max-patch-size: 10240
   add-comment:
     max: 8
     target: "*"
     hide-older-comments: false
+  missing-tool:
+    create-issue: false
+  missing-data:
+    create-issue: false
+  report-incomplete:
+    create-issue: false
+  noop:
+    report-as-issue: false
   create-pull-request:
     draft: true
     labels: [automation, goal]
@@ -350,6 +359,10 @@ If the blocked stop condition is reached, stop substantive work and comment with
 Do not add `goal-completed` for a blocked goal. Keep the goal active unless the
 issue explicitly says a blocked report should end the workflow.
 
+For missing tools, missing data, no-op/problem reports, protected-file
+fallbacks, or any blocker tied to a selected goal, use `add_comment` on
+`selected.number`. Do not open a new issue.
+
 ## Common Mistakes To Avoid
 
 - Do not create a new branch per run.
@@ -357,3 +370,5 @@ issue explicitly says a blocked report should end the workflow.
 - Do not mark complete without the issue's evidence.
 - Do not silently broaden scope when verification fails.
 - Do not repeat a failed path that the state file already ruled out.
+- Do not open a separate issue for problems with the selected goal; comment on
+  the goal issue instead.

@@ -1,4 +1,6 @@
 import importlib.util
+import json
+import re
 import unittest
 from pathlib import Path
 
@@ -81,6 +83,48 @@ TODO
         self.assertIsNone(error)
         self.assertEqual(selected["number"], 2)
         self.assertEqual([goal["number"] for goal in deferred], [1])
+
+    def test_workflow_problem_reports_do_not_create_issues(self):
+        for workflow_path in (ROOT / "workflows" / "goal.md", ROOT / ".github" / "workflows" / "goal.md"):
+            with self.subTest(workflow_path=workflow_path):
+                workflow = workflow_path.read_text(encoding="utf-8")
+
+                self.assertIn("report-failure-as-issue: false", workflow)
+                self.assertIn("missing-tool:\n    create-issue: false", workflow)
+                self.assertIn("missing-data:\n    create-issue: false", workflow)
+                self.assertIn("report-incomplete:\n    create-issue: false", workflow)
+                self.assertIn("noop:\n    report-as-issue: false", workflow)
+                self.assertIn("use `add_comment` on\n`selected.number`. Do not open a new issue.", workflow)
+                self.assertIn("comment on\n  the goal issue instead.", workflow)
+
+        lock = (ROOT / ".github" / "workflows" / "goal.lock.yml").read_text(encoding="utf-8")
+        handler_match = re.search(r'GH_AW_SAFE_OUTPUTS_HANDLER_CONFIG: "(.+)"', lock)
+        config_line = next((line.strip() for line in lock.splitlines() if line.strip().startswith('{"add_comment"')), None)
+        self.assertIsNotNone(config_line)
+        self.assertIsNotNone(handler_match)
+
+        configs = [
+            json.loads(config_line),
+            json.loads(json.loads(f'"{handler_match.group(1)}"')),
+        ]
+        for config in configs:
+            with self.subTest(config=config):
+                self.assertIs(config["missing_tool"]["create_issue"], False)
+                self.assertIs(config["missing_data"]["create_issue"], False)
+                self.assertIs(config["report_incomplete"]["create_issue"], False)
+                self.assertEqual(str(config["noop"]["report-as-issue"]).lower(), "false")
+
+        expected_false_flags = {
+            "GH_AW_NOOP_REPORT_AS_ISSUE",
+            "GH_AW_MISSING_TOOL_CREATE_ISSUE",
+            "GH_AW_REPORT_INCOMPLETE_CREATE_ISSUE",
+            "GH_AW_FAILURE_REPORT_AS_ISSUE",
+        }
+        present_flags = set()
+        for match in re.finditer(r"(GH_AW_[A-Z_]*(?:REPORT_AS_ISSUE|CREATE_ISSUE)): \"([^\"]+)\"", lock):
+            present_flags.add(match.group(1))
+            self.assertEqual(match.group(2), "false")
+        self.assertTrue(expected_false_flags.issubset(present_flags))
 
 
 if __name__ == "__main__":
